@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {MatListModule} from '@angular/material';
 @Component({
   selector: 'app-front-page',
   templateUrl: './front-page.component.html',
@@ -13,3 +13,4 @@ export class FrontPageComponent implements OnInit {
   }
 
 }
+export class TabsOverviewExample {}

@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { InfoComponent } from './info/info.component';
 import { FrontPageComponent } from './front-page/front-page.component';
-
 // Services
 
 @NgModule({
