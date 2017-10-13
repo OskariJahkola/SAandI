@@ -9,6 +9,7 @@ import { MatButtonModule, MatCheckboxModule, MatListModule } from '@angular/mate
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { InfoComponent } from './info/info.component';
+import { FrontPageComponent } from './front-page/front-page.component';
 
 // Services
 
@@ -16,7 +17,8 @@ import { InfoComponent } from './info/info.component';
 	declarations: [
 		AppComponent,
 		HomeComponent,
-		InfoComponent
+		InfoComponent,
+		FrontPageComponent
 	],
 	imports: [
 		BrowserModule,
