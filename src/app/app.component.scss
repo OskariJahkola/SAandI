@@ -1,4 +1,42 @@
-.mat-list-item { // Just for testing, please remove if you read this
-	border: 1px dashed rgba(0, 0, 0, 0.54);
-	margin: 0px 0px 8px 0px;
+// Hyvin WIP kamaa, mutta nyt ei pysty
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.wrapper {
+	background: #C5E1A5;
+	height: 100%;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.container {
+	background:rgba(255,255,255,0.7);
+	border: 1px solid rgba(0,0,0,0.3);
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.content {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+mat-toolbar {
+	a {
+		margin-right: 16px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.wrapper {
+		height: 100vh;
+		padding: 20px;
+	}
 }
