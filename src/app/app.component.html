@@ -1,15 +1,24 @@
 <div class="wrapper">
 	<div class="container">
 		<mat-toolbar color="primary">
-			<a href="#">Recycle4Me</a>
-			<a href="#">Login</a>
-			<a href="#">Request Pick-up</a>
+			You are not logged in
+			<!--<a href="#">Login</a>-->
+			<button mat-button>Give us feed back!</button>
 		</mat-toolbar>
-		
-		<div class="content">
+		<mat-tab-group >
 			<!-- Tänne pistetään sitten kaikki sivut -->
-			<!--<app-home></app-home>-->
-			<app-front-page></app-front-page>
+            <mat-tab label="Recycle4me" ><app-front-page></app-front-page></mat-tab>
+			<mat-tab label="Info about recycling"><app-home></app-home></mat-tab>
+			<mat-tab label="Register"><app-home></app-home></mat-tab>
+			<mat-tab label="Request pick-up"><app-home></app-home></mat-tab>
+        </mat-tab-group>
+	
+		<div class="card text-center">
+			<div class="card-footer text-muted">
+				<p>COPYRIGHT © 2017 Jere Kaplas, Eetu Heimala, Oskari Jahkola, Sakari Laine, Joni Suomalainen</p>
+				<p>Contact information: <a href="#">recycle4me@recycle4me.com</a>.</p>
+			</div>
 		</div>
 	</div>
+
 </div>

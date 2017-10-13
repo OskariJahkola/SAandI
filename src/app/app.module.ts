@@ -3,8 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Import the NgModule for each component you want to use:
-import { MatButtonModule, MatCheckboxModule, MatListModule, MatToolbarModule} from '@angular/material';
-
+import { MatButtonModule, MatCheckboxModule, MatListModule, MatToolbarModule, MatTabsModule} from '@angular/material';
 // Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -22,7 +21,11 @@ import { FrontPageComponent } from './front-page/front-page.component';
 	imports: [
 		BrowserModule,
 		BrowserAnimationsModule,
-		MatButtonModule, MatCheckboxModule, MatListModule, MatToolbarModule// these are just examples
+		MatButtonModule, 
+		MatCheckboxModule, 
+		MatListModule, 
+		MatToolbarModule, 
+		MatTabsModule// these are just examples
 	],
 	providers: [],
 	bootstrap: [AppComponent]
