@@ -7,12 +7,14 @@ import { MatButtonModule, MatCheckboxModule, MatListModule } from '@angular/mate
 
 // Components
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 
 // Services
 
 @NgModule({
 	declarations: [
-		AppComponent
+		AppComponent,
+		HomeComponent
 	],
 	imports: [
 		BrowserModule,
