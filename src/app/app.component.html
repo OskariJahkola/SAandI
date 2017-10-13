@@ -1,16 +1,46 @@
 <div class="wrapper">
 	<div class="container">
 		<mat-toolbar color="primary">
+			
+			<img src="../../assets/logo.png" width="120" height="52">
+			<img src="../../assets/logo.png" width="120" height="52">
+			<img src="../../assets/logo.png" width="120" height="52">
+			<img src="../../assets/logo.png" width="120" height="52">
 			You are not logged in
+			
 			<!--<a href="#">Login</a>-->
-			<button mat-button>Give us feed back!</button>
+			<!--<button mat-button>Give us feed back!</button>-->
+			<img src="../../assets/logo.png" width="120" height="52">
+			<img src="../../assets/logo.png" width="120" height="52">
+			<img src="../../assets/logo.png" width="120" height="52">
+			<img src="../../assets/logo.png" width="120" height="52">
 		</mat-toolbar>
 		<mat-tab-group >
 			<!-- Tänne pistetään sitten kaikki sivut -->
-            <mat-tab label="Recycle4me" ><app-front-page></app-front-page></mat-tab>
-			<mat-tab label="Info about recycling"><app-home></app-home></mat-tab>
-			<mat-tab label="Register"><app-home></app-home></mat-tab>
-			<mat-tab label="Request pick-up"><app-home></app-home></mat-tab>
+			<mat-tab>     
+				<ng-template mat-tab-label>
+					<mat-icon>home</mat-icon> Recycle4me
+				</ng-template>
+				<app-front-page></app-front-page>
+			</mat-tab>
+			<mat-tab>     
+				<ng-template mat-tab-label>
+					<mat-icon>info outline</mat-icon> Info about recycling
+				</ng-template>
+				<app-info></app-info>
+			</mat-tab>
+			<mat-tab>     
+				<ng-template mat-tab-label>
+					<mat-icon>account_circle</mat-icon> Register
+				</ng-template>
+				<app-home></app-home>
+			</mat-tab>
+			<mat-tab>     
+				<ng-template mat-tab-label>
+					<mat-icon>build</mat-icon> Request pick-up
+				</ng-template>
+				<app-home></app-home>
+			</mat-tab>
         </mat-tab-group>
 	
 		<div class="card text-center">
