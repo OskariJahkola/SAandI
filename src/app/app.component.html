@@ -4,7 +4,14 @@
 			
 			<img src="/assets/logo.png" width="7.5%">
 
-			You are not logged in
+			<div *ngIf="afAuth.authState | async; let user; else showLogin">
+				<h1>Hello {{ user.displayName }}!</h1>
+				<button (click)="logout()">Logout</button>
+			</div>
+			<ng-template #showLogin>
+				<p>Please login.</p>
+				<button (click)="login()">Login with Google</button>
+			</ng-template>
 			
 			<!--<a href="#">Login</a>-->
 			<!--<button mat-button>Give us feed back!</button>-->
