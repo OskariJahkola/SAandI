@@ -1,0 +1,12 @@
+.ngui-map-container {
+  height: 620px;
+	width: 620px;
+}
+
+@media screen and (max-width: 849px) {
+
+	.ngui-map-container {
+		width: 100%;
+		height: 400px
+	}
+}

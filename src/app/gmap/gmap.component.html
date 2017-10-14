@@ -1,0 +1,12 @@
+<h2 >Choose location</h2>
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI368OuKSOMpfH9xNYwdnpe6HGUI_-VVg"></script>!-->
+<ngui-map class="ngui-map-container" [options]="mapOptions" (mapClick)="mapClicked($event)">
+<marker [position]="pos" (initialized$)="onMarkerInit($event)" (dragend)="onMarkerDrag($event)" draggable="true">
+</marker>
+</ngui-map>
+<!--
+<div id="ngui-map-container">
+    
+</div>!-->
+
+<button color="primary" [disabled]="!geoloc" (click)="setGeo();">USE GEOLOCATION</button>
