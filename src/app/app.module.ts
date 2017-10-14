@@ -6,7 +6,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatListModule, MatToolbarModule, MatTabsModule, MatIconModule } from '@angular/material';
 // Components
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { InfoComponent } from './info/info.component';
 import { FrontPageComponent } from './front-page/front-page.component';
 // Services
@@ -14,17 +13,16 @@ import { FrontPageComponent } from './front-page/front-page.component';
 @NgModule({
 	declarations: [
 		AppComponent,
-		HomeComponent,
 		InfoComponent,
 		FrontPageComponent
 	],
 	imports: [
 		BrowserModule,
 		BrowserAnimationsModule,
-		MatButtonModule, 
-		MatCheckboxModule, 
-		MatListModule, 
-		MatToolbarModule, 
+		MatButtonModule,
+		MatCheckboxModule,
+		MatListModule,
+		MatToolbarModule,
 		MatTabsModule,
 		MatIconModule
 	],
