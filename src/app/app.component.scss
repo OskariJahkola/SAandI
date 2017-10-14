@@ -5,6 +5,7 @@ body {
 	padding: 0;
 	width: 100%;
 	height: 100%;
+	background: #C5E1A5;
 }
 
 .wrapper {
@@ -14,6 +15,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	min-height: 100vh;
 }
 
 .container {
@@ -36,7 +38,21 @@ mat-toolbar {
 
 @media screen and (min-width: 1024px) {
 	.wrapper {
-		height: 100vh;
+		height: 100%;
 		padding: 20px;
 	}
+}
+
+.facebookButton {
+	background: #3b5998;
+	color: rgba(255, 255, 255, 0.87);
+}
+
+.googleButton {
+	background: #424242;	
+	color: rgba(255, 255, 255, 0.87);
+}
+
+.buttonPad {
+	margin: 8px;
 }

@@ -4,13 +4,15 @@
 			
 			<img src="/assets/logo.png" width="7.5%">
 
-			<div *ngIf="afAuth.authState | async; let user; else showLogin">
-				<h1>Hello {{ user.displayName }}!</h1>
-				<button (click)="logout()">Logout</button>
+			<div #asd *ngIf="afAuth.authState | async; let user; else showLogin">
+				<span>Hello {{ user.displayName }}!</span>
+				<button class="buttonPad logOutButton" type="button" color="warn" mat-raised-button (click)="logout()">Logout</button>
 			</div>
 			<ng-template #showLogin>
-				<p>Please login.</p>
-				<button (click)="login()">Login with Google</button>
+				<span>Please login.</span>
+				<!-- <button (click)="login()">Login with Google</button> -->
+				<button class="buttonPad facebookButton" type="button" mat-raised-button (click)="facebookLogin()">Facebook</button>
+				<button class="buttonPad googleButton" type="button" mat-raised-button (click)="googleLogin()">Google</button>
 			</ng-template>
 			
 			<!--<a href="#">Login</a>-->
@@ -31,6 +33,7 @@
 				</ng-template>
 				<app-info></app-info>
 			</mat-tab>
+			<!-- Voiskohan ottaa rekisteröinnin helvettiin, jos pelkkä some riittäis? -->
 			<mat-tab>
 				<ng-template mat-tab-label>
 					<mat-icon>account_circle</mat-icon> Register
