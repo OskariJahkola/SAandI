@@ -3,7 +3,7 @@
 		<mat-toolbar color="primary">
 			
 			<img src="/assets/logo.png" width="7.5%">
-
+			<div class="toolbar-spacer"></div>
 			<div #asd *ngIf="afAuth.authState | async; let user; else showLogin">
 				<span>Hello {{ user.displayName }}!</span>
 				<button class="buttonPad logOutButton" type="button" color="warn" mat-raised-button (click)="logout()">Logout</button>
@@ -14,6 +14,8 @@
 				<button class="buttonPad facebookButton" type="button" mat-raised-button (click)="facebookLogin()">Facebook</button>
 				<button class="buttonPad googleButton" type="button" mat-raised-button (click)="googleLogin()">Google</button>
 			</ng-template>
+
+
 			
 			<!--<a href="#">Login</a>-->
 			<!--<button mat-button>Give us feed back!</button>-->
@@ -51,6 +53,7 @@
 	
 		<div class="card text-center">
 			<div class="card-footer text-muted">
+				<p>Recycle4Me</p>
 				<p>COPYRIGHT © 2017 Jere Kaplas, Eetu Heimala, Oskari Jahkola, Sakari Laine, Joni Suomalainen</p>
 				<p>Contact information: <a href="#">recycle4me@recycle4me.com</a>.</p>
 			</div>
