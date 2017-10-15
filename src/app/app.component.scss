@@ -43,14 +43,19 @@ mat-toolbar {
 	}
 }
 
+.emailButton {
+	background: #424242;
+	color: rgba(255, 255, 255, 0.92);
+}
+
 .facebookButton {
 	background: #3b5998;
-	color: rgba(255, 255, 255, 0.87);
+	color: rgba(255, 255, 255, 0.92);
 }
 
 .googleButton {
-	background: #424242;	
-	color: rgba(255, 255, 255, 0.87);
+	background: #FFFFFF;
+	color: rgba(0,0,0, 0.87);
 }
 
 .buttonPad {

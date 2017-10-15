@@ -17,14 +17,13 @@ export class AppComponent {
 		this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
 	}
 
-/* 	facebookLogin() {
-		this.af.auth.login({
-			provider: AuthProviders.Facebook,
-			method: AuthMethods.Popup
-		});
-	} */
 	facebookLogin() {
 		this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider());
+	}
+
+	emailLogin() {
+		// Jos me joskus halutaan tehä oma rekisteröinti
+		return;
 	}
 
 	logout() {

@@ -10,3 +10,39 @@
 		height: 400px
 	}
 }
+
+.flex-header {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 60px;
+}
+
+.flex-spacer {
+	flex: 1 1 auto;
+}
+
+.buttonMargin {
+	margin: 8px;
+}
+
+h2 {
+	margin: 0;
+}
+
+.container {
+	display: flex;
+}
+
+.right {
+	margin-left: 4px;
+	padding-left: 4px;
+}
+
+.full {
+	width: 100%;
+}
+
+mat-form-field {
+	margin-bottom: 2px;
+}

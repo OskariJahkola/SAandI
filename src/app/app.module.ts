@@ -7,7 +7,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 // Import the NgModule for each component you want to use:
-import { MatButtonModule, MatCheckboxModule, MatListModule, MatToolbarModule, MatTabsModule, MatIconModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatListModule, MatToolbarModule, MatTabsModule, MatIconModule, MatInputModule } from '@angular/material';
 // Components
 import { AppComponent } from './app.component';
 import { InfoComponent } from './info/info.component';
@@ -23,10 +23,10 @@ import { environment } from '../environments/environment';
 		AppComponent,
 		InfoComponent,
 		FrontPageComponent,
-        GmapComponent
+		GmapComponent
 	],
 	imports: [
-        NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyAI368OuKSOMpfH9xNYwdnpe6HGUI_-VVg'}),
+		NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyAI368OuKSOMpfH9xNYwdnpe6HGUI_-VVg'}),
 		BrowserModule,
 		AngularFireModule.initializeApp(environment.firebase),
 		AngularFireAuthModule,
@@ -37,7 +37,8 @@ import { environment } from '../environments/environment';
 		MatListModule,
 		MatToolbarModule,
 		MatTabsModule,
-		MatIconModule
+		MatIconModule,
+		MatInputModule
 	],
 	providers: [GeolocationService],
 	bootstrap: [AppComponent]

@@ -1,12 +1,42 @@
-<h2 >Choose location</h2>
-<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI368OuKSOMpfH9xNYwdnpe6HGUI_-VVg"></script>!-->
-<ngui-map class="ngui-map-container" [options]="mapOptions" (mapClick)="mapClicked($event)">
-<marker [position]="pos" (initialized$)="onMarkerInit($event)" (dragend)="onMarkerDrag($event)" draggable="true">
-</marker>
-</ngui-map>
-<!--
-<div id="ngui-map-container">
-    
-</div>!-->
-
-<button color="primary" [disabled]="!geoloc" (click)="setGeo();">USE GEOLOCATION</button>
+<div class="container">
+	<div class="left">
+		<div class="flex-header">
+			<h2>Choose location</h2>
+			<button class="buttonMargin" mat-raised-button color="primary" [disabled]="!geoloc" (click)="setGeo();">USE GEOLOCATION</button>
+			<div class="flex-spacer"></div>
+		</div>
+		<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI368OuKSOMpfH9xNYwdnpe6HGUI_-VVg"></script>!-->
+		<ngui-map class="ngui-map-container" [options]="mapOptions" (mapClick)="mapClicked($event)">
+		<marker [position]="pos" (initialized$)="onMarkerInit($event)" (dragend)="onMarkerDrag($event)" draggable="true">
+		</marker>
+		</ngui-map>
+		<!--
+		<div id="ngui-map-container">
+				
+		</div>!-->
+	</div>
+	<div class="right">
+		<div class="flex-header">
+			<h2>Fill in information</h2>
+		</div>
+		<form name="pickupform" class="full">
+			<mat-form-field class="full">
+				<input matInput type="text" name="address" placeholder="Address">
+			</mat-form-field>
+			<mat-form-field class="full">
+				<!-- 
+					Tääki on type="text" ni voi vaa kirjottaa et monelta haluu noudon, jos ei osaa kirjottaa ymmärrettävästi ni sit aika valitaan käyttäjän puolesta
+					Toinen vaihtoehto on laittaa vierekkäin kaks type="time" inputtia, mut mehhhhhh
+				-->
+				<input matInput type="text" placeholder="Time of day available for pickup">
+			</mat-form-field>
+			<mat-form-field class="full">
+				<textarea matInput name="description" placeholder="Description"></textarea>
+				<mat-hint>
+					Describe the items and their approximate size
+				</mat-hint>
+			</mat-form-field>
+			<button mat-raised-button type="button" color="primary">Request pickup</button>
+		</form>
+	</div>
+</div>
