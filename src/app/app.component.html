@@ -30,12 +30,12 @@
 				</ng-template>
 				<app-info></app-info>
 			</mat-tab>
-			<mat-tab>
+			<!-- <mat-tab>
 				<ng-template mat-tab-label>
 					<mat-icon>account_circle</mat-icon> Register
 				</ng-template>
 				<p>Nothing here yet</p>
-			</mat-tab>
+			</mat-tab> -->
 			<mat-tab *ngIf="afAuth.authState | async;">
 				<ng-template mat-tab-label>
 					<mat-icon>build</mat-icon> Request pick-up
