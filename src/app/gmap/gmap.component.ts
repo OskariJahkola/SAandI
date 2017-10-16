@@ -9,6 +9,7 @@ import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from
 import {} from '@types/googlemaps';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
+import { MatSnackBar } from '@angular/material';
 
 declare var google: any;
 @Component({
@@ -42,7 +43,8 @@ export class GmapComponent implements AfterViewInit, OnDestroy {
 
 	constructor(private geolocService: GeolocationService,
 							private fb: FormBuilder,
-							private db: AngularFireDatabase) {
+							private db: AngularFireDatabase,
+							public snackBar: MatSnackBar) {
 		const geoObserver = {
 			next: x => this.geoloc = new Coords(x.coords.latitude, x.coords.longitude, x.coords.accuracy),
 			error: err => console.error('Geolocation observer error: ' + err),
@@ -115,7 +117,12 @@ export class GmapComponent implements AfterViewInit, OnDestroy {
 
 	onPickupSubmit() {
 		this.pickup = this.pickupform.value;
-		this.pickupsRef.push(this.pickup);
+		this.pickupsRef.push(this.pickup).then(
+			success => {
+				this.pickupform.reset();
+				this.snackBar.open('Request succesfully sent.');
+			},
+			err => console.log(err));
 	}
 
 }

@@ -7,7 +7,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 // Import the NgModule for each component you want to use:
-import { MatButtonModule, MatCheckboxModule, MatListModule, MatToolbarModule, MatTabsModule, MatIconModule, MatInputModule } from '@angular/material';
+import { 	MatButtonModule, MatCheckboxModule, MatListModule, MatToolbarModule,
+					MatTabsModule, MatIconModule, MatInputModule, MatSnackBarModule } from '@angular/material';
 // Components
 import { AppComponent } from './app.component';
 import { InfoComponent } from './info/info.component';
@@ -40,6 +41,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 		MatTabsModule,
 		MatIconModule,
 		MatInputModule,
+		MatSnackBarModule,
 		ReactiveFormsModule
 	],
 	providers: [GeolocationService],
