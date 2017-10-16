@@ -19,19 +19,20 @@
 		<div class="flex-header">
 			<h2>Fill in information</h2>
 		</div>
-		<form name="pickupform" class="full">
+		<form [formGroup]="pickupform" class="full" novalidate>
 			<mat-form-field class="full">
-				<input matInput type="text" name="address" placeholder="Address">
+				<input matInput type="text" formControlName="address" placeholder="Address" required>
+				<mat-hint align="end" *ngIf="pickupform.get('address').hasError('required') && !pickupform.get('address').pristine">Address is required!</mat-hint>
 			</mat-form-field>
 			<mat-form-field class="full">
 				<!-- 
 					Tääki on type="text" ni voi vaa kirjottaa et monelta haluu noudon, jos ei osaa kirjottaa ymmärrettävästi ni sit aika valitaan käyttäjän puolesta
 					Toinen vaihtoehto on laittaa vierekkäin kaks type="time" inputtia, mut mehhhhhh
 				-->
-				<input matInput type="text" placeholder="Time of day available for pickup">
+				<input matInput type="text" formControlName="timeofday" placeholder="Time of day available for pickup">
 			</mat-form-field>
 			<mat-form-field class="full">
-				<textarea matInput name="description" placeholder="Description"></textarea>
+				<textarea matInput formControlName="description" placeholder="Description" required></textarea>
 				<mat-hint>
 					Describe the items and their approximate size
 				</mat-hint>

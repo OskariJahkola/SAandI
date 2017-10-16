@@ -15,6 +15,7 @@ import { FrontPageComponent } from './front-page/front-page.component';
 import { GmapComponent} from './gmap/gmap.component';
 import { GeolocationService } from './services/geolocation.service';
 import { environment } from '../environments/environment';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // Services
 
@@ -38,7 +39,8 @@ import { environment } from '../environments/environment';
 		MatToolbarModule,
 		MatTabsModule,
 		MatIconModule,
-		MatInputModule
+		MatInputModule,
+		ReactiveFormsModule
 	],
 	providers: [GeolocationService],
 	bootstrap: [AppComponent]
