@@ -19,7 +19,7 @@
 		<div class="flex-header">
 			<h2>Fill in information</h2>
 		</div>
-		<form [formGroup]="pickupform" class="full" novalidate>
+		<form (ngSubmit)="onPickupSubmit()" [formGroup]="pickupform" class="full" novalidate>
 			<mat-form-field class="full">
 				<input matInput type="text" formControlName="address" placeholder="Address" required>
 				<mat-hint align="end" *ngIf="pickupform.get('address').hasError('required') && !pickupform.get('address').pristine">Address is required!</mat-hint>
@@ -37,7 +37,7 @@
 					Describe the items and their approximate size
 				</mat-hint>
 			</mat-form-field>
-			<button mat-raised-button type="button" color="primary">Request pickup</button>
+			<button mat-raised-button type="submit" color="primary">Request pickup</button>
 		</form>
 	</div>
 </div>

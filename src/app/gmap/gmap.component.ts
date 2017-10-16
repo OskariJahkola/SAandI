@@ -6,10 +6,10 @@ import { Location } from '@angular/common';
 import { NguiMapComponent } from '@ngui/map';
 import { BrowserModule } from '@angular/platform-browser';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';  // <-- #1 import module
-
-
-
 import {} from '@types/googlemaps';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { Observable } from 'rxjs/Observable';
+
 declare var google: any;
 @Component({
 	selector: 'app-gmap',
@@ -17,7 +17,7 @@ declare var google: any;
 	styleUrls: ['./gmap.component.scss']
 })
 
-export class GmapComponent implements AfterViewInit, OnDestroy{
+export class GmapComponent implements AfterViewInit, OnDestroy {
 	@ViewChild(NguiMapComponent)
 	map: NguiMapComponent;
 	marker: any;
@@ -38,8 +38,11 @@ export class GmapComponent implements AfterViewInit, OnDestroy{
 	pickup: Pickup;
 	pickupform: FormGroup;
 
+	pickupsRef: AngularFireList<any>;
+
 	constructor(private geolocService: GeolocationService,
-							private fb: FormBuilder) {
+							private fb: FormBuilder,
+							private db: AngularFireDatabase) {
 		const geoObserver = {
 			next: x => this.geoloc = new Coords(x.coords.latitude, x.coords.longitude, x.coords.accuracy),
 			error: err => console.error('Geolocation observer error: ' + err),
@@ -50,6 +53,7 @@ export class GmapComponent implements AfterViewInit, OnDestroy{
 
 		this.pickup = new Pickup();
 		this.createForm(this.pickup);
+		this.pickupsRef = db.list('pickups');
 	}
 
 	createForm(pickup: Pickup) {
@@ -107,6 +111,11 @@ export class GmapComponent implements AfterViewInit, OnDestroy{
 
 	getLoc() {
 		return this.pos;
+	}
+
+	onPickupSubmit() {
+		this.pickup = this.pickupform.value;
+		this.pickupsRef.push(this.pickup);
 	}
 
 }
