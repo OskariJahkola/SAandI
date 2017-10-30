@@ -4,12 +4,12 @@
 			
 			<img src="/assets/logo.png" width="7.5%">
 			<div class="toolbar-spacer"></div>
-			<div *ngIf="customerstate=='customer'; else showLogin">
+			<div *ngIf="customerstate=='customer'">
                 <button class="buttonPad" type="button" mat-raised-button (click)="switchService()">Switch to Service Provider</button>
 			</div>
-			<ng-template #showLogin>
+            <div *ngIf="customerstate=='service'">
                 <button class="buttonPad" type="button" mat-raised-button (click)="switchCustomer()">Switch to Customer</button>
-            </ng-template>
+			</div>
 
 		</mat-toolbar>
 		<!-- Tabs for Service Provider -->
