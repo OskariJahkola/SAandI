@@ -10,7 +10,7 @@ import * as firebase from 'firebase/app';
 })
 export class AppComponent {
 	title = 'Recycle4Me';
-
+    customerstate='customer';
 	constructor(public afAuth: AngularFireAuth) { }
 
 	googleLogin() {
@@ -29,4 +29,10 @@ export class AppComponent {
 	logout() {
 		this.afAuth.auth.signOut();
 	}
+    switchService() {
+        this.customerstate='service';
+    }
+    switchCustomer() {
+        this.customerstate='customer';
+    }
 }

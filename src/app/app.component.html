@@ -4,46 +4,56 @@
 			
 			<img src="/assets/logo.png" width="7.5%">
 			<div class="toolbar-spacer"></div>
-			<div *ngIf="afAuth.authState | async; let user; else showLogin">
-				<span>Hello {{ user.displayName }}!</span>
-				<button class="buttonPad logOutButton" type="button" color="warn" mat-raised-button (click)="logout()">Logout</button>
+			<div *ngIf="customerstate=='customer'; else showLogin">
+                <button class="buttonPad" type="button" mat-raised-button (click)="switchService()">Switch to Service Provider</button>
 			</div>
 			<ng-template #showLogin>
-				<span>Please login:</span>
-				<button class="buttonPad googleButton" type="button" mat-raised-button (click)="googleLogin()">Google</button>
-				<button class="buttonPad facebookButton" type="button" mat-raised-button (click)="facebookLogin()">Facebook</button>
-				<button disabled class="buttonPad emailButton" type="button" mat-raised-button (click)="emailLogin()">E-Mail</button>
-			</ng-template>
+                <button class="buttonPad" type="button" mat-raised-button (click)="switchCustomer()">Switch to Customer</button>
+            </ng-template>
 
 		</mat-toolbar>
-		<!-- Tänne pistetään sitten kaikki sivut -->
-		<mat-tab-group >
+		<!-- Tabs for Service Provider -->
+		<mat-tab-group *ngIf="customerstate=='service'">
 			<mat-tab>
 			<ng-template mat-tab-label>
-					<mat-icon>home</mat-icon> Recycle4me
+					<mat-icon>home</mat-icon> Servicetab1
 				</ng-template>
 				<app-front-page></app-front-page>
 			</mat-tab>
 			<mat-tab>
 				<ng-template mat-tab-label>
-					<mat-icon>info outline</mat-icon> Info about recycling
+					<mat-icon>info outline</mat-icon> Servicetab2
 				</ng-template>
 				<app-info></app-info>
 			</mat-tab>
-			<!-- <mat-tab>
-				<ng-template mat-tab-label>
-					<mat-icon>account_circle</mat-icon> Register
-				</ng-template>
-				<p>Nothing here yet</p>
-			</mat-tab> -->
 			<mat-tab *ngIf="afAuth.authState | async;">
 				<ng-template mat-tab-label>
-					<mat-icon>build</mat-icon> Request pick-up
+					<mat-icon>build</mat-icon> Servicetab3
 				</ng-template>
 				<app-gmap></app-gmap>
 			</mat-tab>
 		</mat-tab-group>
-	
+        <!-- Tabs for Customer -->
+        <mat-tab-group *ngIf="customerstate=='customer'">
+			<mat-tab>
+			<ng-template mat-tab-label>
+					<mat-icon>home</mat-icon> Customertab1
+				</ng-template>
+				<app-front-page></app-front-page>
+			</mat-tab>
+			<mat-tab>
+				<ng-template mat-tab-label>
+					<mat-icon>info outline</mat-icon> Customertab2
+				</ng-template>
+				<app-info></app-info>
+			</mat-tab>
+			<mat-tab *ngIf="afAuth.authState | async;">
+				<ng-template mat-tab-label>
+					<mat-icon>build</mat-icon> Customertab3
+				</ng-template>
+				<app-gmap></app-gmap>
+			</mat-tab>
+		</mat-tab-group>
 		<div class="card text-center">
 			<div class="card-footer text-muted">
 				<p>Recycle4Me</p>
