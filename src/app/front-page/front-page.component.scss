@@ -25,3 +25,23 @@
     padding-right: 40px;
     font-weight: bold;
 }
+
+.service-button
+{
+    width: 100%;
+    text-align: center;
+}
+
+.add-service
+{
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
