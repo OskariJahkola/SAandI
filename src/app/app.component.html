@@ -38,24 +38,21 @@
 
         <!-- Tabs and pages for Customer -->
         <mat-tab-group *ngIf="customerstate=='customer'">
+			<!-- Home page = page with calendar -->
 			<mat-tab>
-			<ng-template mat-tab-label>
-					<mat-icon>home</mat-icon> Customertab1
+				<ng-template mat-tab-label>
+					<mat-icon>home</mat-icon> Home
 				</ng-template>
 				<app-front-page></app-front-page>
 			</mat-tab>
+
 			<mat-tab>
 				<ng-template mat-tab-label>
 					<mat-icon>info outline</mat-icon> Customertab2
 				</ng-template>
 				<app-info></app-info>
 			</mat-tab>
-			<mat-tab *ngIf="afAuth.authState | async;">
-				<ng-template mat-tab-label>
-					<mat-icon>build</mat-icon> Customertab3
-				</ng-template>
-				<app-gmap></app-gmap>
-			</mat-tab>
+
 		</mat-tab-group>
 		<!-- Customer ends here -->
 
