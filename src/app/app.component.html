@@ -1,7 +1,7 @@
 <div class="wrapper">
 	<div class="container">
 		<mat-toolbar color="primary">
-			
+
 			<img src="/assets/logo.png" width="7.5%">
 			<div class="toolbar-spacer"></div>
 			<div *ngIf="customerstate=='customer'">
@@ -12,7 +12,8 @@
 			</div>
 
 		</mat-toolbar>
-		<!-- Tabs for Service Provider -->
+
+		<!-- Tabs and pages for Service Provider -->
 		<mat-tab-group *ngIf="customerstate=='service'">
 			<mat-tab>
 			<ng-template mat-tab-label>
@@ -33,7 +34,9 @@
 				<app-gmap></app-gmap>
 			</mat-tab>
 		</mat-tab-group>
-        <!-- Tabs for Customer -->
+		<!-- Service provider ends here -->
+
+        <!-- Tabs and pages for Customer -->
         <mat-tab-group *ngIf="customerstate=='customer'">
 			<mat-tab>
 			<ng-template mat-tab-label>
@@ -54,6 +57,8 @@
 				<app-gmap></app-gmap>
 			</mat-tab>
 		</mat-tab-group>
+		<!-- Customer ends here -->
+
 		<div class="card text-center">
 			<div class="card-footer text-muted">
 				<p>Recycle4Me</p>
