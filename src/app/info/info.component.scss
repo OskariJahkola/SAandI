@@ -1,22 +1,15 @@
 // This is a very janky fix for accordions to work when generated out of view
-
-div.mat-expansion-panel-content:not(.mat-expanded) {
-	height: 0px;
-	visibility: hidden;
+.col_left, .col_right {
+    width: 15%;
 }
-
-.mat-expansion-panel-header:not(.mat-expanded)  {
-	height: 48px;
+.col_middle {
+    width: 70%;
 }
-
-.mat-expansion-panel-header  {
-	height: 64px;
-	.mat-content {
-			font-size: 18px;
-	}
-	&.mat-expanded {        
-			.mat-expansion-indicator {
-					transform: rotate(180deg);
-			}
-	}
+.aboutus {
+	font-family: 'Rozha One';
+	font-size: 48px;
+}
+.text {
+	font-family: 'Rozha One';
+	font-size: 20px;
 }
