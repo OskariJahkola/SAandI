@@ -7,6 +7,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 // Import the NgModule for each component you want to use:
 import { 	MatButtonModule, MatCheckboxModule, MatListModule, MatToolbarModule,
 					MatTabsModule, MatIconModule, MatInputModule, MatSnackBarModule,
@@ -18,6 +19,7 @@ import { FrontPageComponent } from './front-page/front-page.component';
 import { GmapComponent} from './gmap/gmap.component';
 import { GeolocationService } from './services/geolocation.service';
 import { environment } from '../environments/environment';
+import { ServiceComponent } from './service/service.component';
 
 // Services
 
@@ -26,8 +28,9 @@ import { environment } from '../environments/environment';
 		AppComponent,
 		InfoComponent,
 		FrontPageComponent,
-		GmapComponent
-	],
+		GmapComponent,
+		ServiceComponent,
+		],
 	imports: [
 		NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyAI368OuKSOMpfH9xNYwdnpe6HGUI_-VVg'}),
 		BrowserModule,
@@ -44,7 +47,8 @@ import { environment } from '../environments/environment';
 		MatInputModule,
 		MatSnackBarModule,
 		MatExpansionModule,
-		ReactiveFormsModule
+		ReactiveFormsModule,
+		CarouselModule.forRoot()
 	],
 	providers: [GeolocationService],
 	bootstrap: [AppComponent]
