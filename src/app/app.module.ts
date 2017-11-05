@@ -10,7 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 // Import the NgModule for each component you want to use:
 import { 	MatButtonModule, MatCheckboxModule, MatListModule, MatToolbarModule,
 					MatTabsModule, MatIconModule, MatInputModule, MatSnackBarModule,
-					MatExpansionModule } from '@angular/material';
+					MatExpansionModule, MatDatepickerModule } from '@angular/material';
 // Components
 import { AppComponent } from './app.component';
 import { InfoComponent } from './info/info.component';
@@ -18,6 +18,7 @@ import { FrontPageComponent } from './front-page/front-page.component';
 import { GmapComponent} from './gmap/gmap.component';
 import { GeolocationService } from './services/geolocation.service';
 import { environment } from '../environments/environment';
+import { AddEventComponent } from './add-event/add-event.component';
 
 // Services
 
@@ -26,7 +27,8 @@ import { environment } from '../environments/environment';
 		AppComponent,
 		InfoComponent,
 		FrontPageComponent,
-		GmapComponent
+		GmapComponent,
+		AddEventComponent
 	],
 	imports: [
 		NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyAI368OuKSOMpfH9xNYwdnpe6HGUI_-VVg'}),
