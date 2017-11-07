@@ -11,7 +11,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 // Import the NgModule for each component you want to use:
 import { 	MatButtonModule, MatCheckboxModule, MatListModule, MatToolbarModule,
 					MatTabsModule, MatIconModule, MatInputModule, MatSnackBarModule,
-					MatExpansionModule } from '@angular/material';
+					MatExpansionModule, MatDatepickerModule } from '@angular/material';
 // Components
 import { AppComponent } from './app.component';
 import { InfoComponent } from './info/info.component';
@@ -20,7 +20,7 @@ import { GmapComponent} from './gmap/gmap.component';
 import { GeolocationService } from './services/geolocation.service';
 import { environment } from '../environments/environment';
 import { ServiceComponent } from './service/service.component';
-
+import { Globals } from './globals.service';
 // Services
 
 @NgModule({
@@ -50,7 +50,7 @@ import { ServiceComponent } from './service/service.component';
 		ReactiveFormsModule,
 		CarouselModule.forRoot()
 	],
-	providers: [GeolocationService],
-	bootstrap: [AppComponent]
+	providers: [GeolocationService, Globals],
+	bootstrap: [AppComponent],
 })
 export class AppModule { }

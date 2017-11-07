@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Observable } from 'rxjs/Observable';
 import * as firebase from 'firebase/app';
+import { Globals } from './globals.service'
 
 @Component({
 	selector: 'app-root',
@@ -11,7 +12,11 @@ import * as firebase from 'firebase/app';
 export class AppComponent {
 	title = 'Recycle4Me';
     customerstate='customer';
-	constructor(public afAuth: AngularFireAuth) { }
+	selectedIndex: number = 1;
+
+	constructor(public afAuth: AngularFireAuth, private util:Globals) {
+		util.selIndex = 1;
+	}
 
 	googleLogin() {
 		this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
@@ -35,4 +40,7 @@ export class AppComponent {
     switchCustomer() {
         this.customerstate='customer';
     }
+	action() {
+		this.util.selIndex = 0;
+	}
 }
