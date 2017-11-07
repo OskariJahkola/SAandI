@@ -10,12 +10,13 @@
 {
     padding: 20px;
     float: left;
-    max-width: 300px;
+    max-width: 500px;
 }
 
 .profile-right
 {
     text-align: right;
+    margin-top: 10px;
 }
 
 .pic-label
@@ -34,11 +35,30 @@
 
 .add-service
 {
-    background-color: #008CBA;
-    color: white;
+    background-color: #C5E1A5;
+    color: black;
     padding: 15px 40px;
     text-align: center;
-    display: inline-block;
+    // display: inline-block;
     font-size: 16px;
     margin: 4px 20px;
+}
+
+#calendar-section
+{
+    padding: 20px;
+    background-color: white;
+}
+
+.events-list
+{
+    padding: 20px;
+}
+
+#eventForm
+{
+    margin: 20px;
+    padding: 20px;
+    width: auto;
+    background-color: white;
 }

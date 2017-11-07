@@ -13,7 +13,6 @@
 
 		</mat-toolbar>
 
-		<!-- Tabs and pages for Service Provider -->
 		<mat-tab-group *ngIf="customerstate=='service'">
 			<mat-tab>
 			<ng-template mat-tab-label>
@@ -34,11 +33,8 @@
 				<app-gmap></app-gmap>
 			</mat-tab>
 		</mat-tab-group>
-		<!-- Service provider ends here -->
 
-        <!-- Tabs and pages for Customer -->
-        <mat-tab-group *ngIf="customerstate=='customer'">
-			<!-- Home page = page with calendar -->
+        <mat-tab-group *ngIf="customerstate=='customer'" [(selectedIndex)]="util.selIndex">
 			<mat-tab>
 				<ng-template mat-tab-label>
 					<mat-icon>home</mat-icon> Home
@@ -54,7 +50,6 @@
 			</mat-tab>
 
 		</mat-tab-group>
-		<!-- Customer ends here -->
 
 		<div class="card text-center">
 			<div class="card-footer text-muted">

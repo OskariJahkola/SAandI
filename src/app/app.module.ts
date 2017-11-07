@@ -18,7 +18,7 @@ import { FrontPageComponent } from './front-page/front-page.component';
 import { GmapComponent} from './gmap/gmap.component';
 import { GeolocationService } from './services/geolocation.service';
 import { environment } from '../environments/environment';
-import { AddEventComponent } from './add-event/add-event.component';
+import { Globals } from './globals.service';
 
 // Services
 
@@ -28,7 +28,6 @@ import { AddEventComponent } from './add-event/add-event.component';
 		InfoComponent,
 		FrontPageComponent,
 		GmapComponent,
-		AddEventComponent
 	],
 	imports: [
 		NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyAI368OuKSOMpfH9xNYwdnpe6HGUI_-VVg'}),
@@ -46,9 +45,10 @@ import { AddEventComponent } from './add-event/add-event.component';
 		MatInputModule,
 		MatSnackBarModule,
 		MatExpansionModule,
-		ReactiveFormsModule
+		ReactiveFormsModule,
+		MatDatepickerModule
 	],
-	providers: [GeolocationService],
-	bootstrap: [AppComponent]
+	providers: [GeolocationService, Globals],
+	bootstrap: [AppComponent],
 })
 export class AppModule { }
