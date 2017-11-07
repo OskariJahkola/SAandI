@@ -21,6 +21,7 @@ import { GeolocationService } from './services/geolocation.service';
 import { environment } from '../environments/environment';
 import { ServiceComponent } from './service/service.component';
 import { Globals } from './globals.service';
+import { ProvidersListComponent } from './providers-list/providers-list.component';
 // Services
 
 @NgModule({
@@ -30,6 +31,7 @@ import { Globals } from './globals.service';
 		FrontPageComponent,
 		GmapComponent,
 		ServiceComponent,
+		ProvidersListComponent,
 		],
 	imports: [
 		NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyAI368OuKSOMpfH9xNYwdnpe6HGUI_-VVg'}),

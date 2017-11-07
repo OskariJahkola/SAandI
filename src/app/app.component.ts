@@ -12,10 +12,9 @@ import { Globals } from './globals.service'
 export class AppComponent {
 	title = 'Recycle4Me';
     customerstate='customer';
-	selectedIndex: number = 1;
 
 	constructor(public afAuth: AngularFireAuth, private util:Globals) {
-		util.selIndex = 1;
+		util.selIndex = 0;
 	}
 
 	googleLogin() {
