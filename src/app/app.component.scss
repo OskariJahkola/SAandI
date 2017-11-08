@@ -5,11 +5,11 @@ body {
 	padding: 0;
 	width: 100%;
 	height: 100%;
-	background: #fffce5;
+	// background: #C5E1A5;
 }
 
 .wrapper {
-	background: #fffce5;
+	// background: #C5E1A5;
 	height: 100%;
 	padding: 0;
 	display: flex;
@@ -19,17 +19,16 @@ body {
 }
 
 .container {
-	background:rgba(255,255,255,0.7);
-	border: 1px solid rgba(0,0,0,0.3);
+	// background:rgba(255,255,255,0.7);
+	background: #f0efe7;
+	border: 2px solid #d8d4c0;
 	padding-left: 0;
 	padding-right: 0;
-    
 }
 
 .content {
 	padding-left: 5px;
 	padding-right: 5px;
-    
 }
 
 mat-toolbar {

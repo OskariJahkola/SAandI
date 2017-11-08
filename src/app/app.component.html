@@ -1,7 +1,7 @@
 <div class="wrapper">
 	<div class="container">
 		<mat-toolbar color="primary">
-			
+
 			<img src="/assets/logo.png" width="7.5%">
 			<div class="toolbar-spacer"></div>
 			<div *ngIf="customerstate=='customer'">
@@ -12,8 +12,8 @@
 			</div>
 
 		</mat-toolbar>
-		<!-- Tabs for Service Provider -->
-		<mat-tab-group *ngIf="customerstate=='service'">
+
+        <mat-tab-group *ngIf="customerstate=='service'">
 			<mat-tab>
 			<ng-template mat-tab-label>
 					<mat-icon>home</mat-icon> Calendar
@@ -27,21 +27,24 @@
 				<app-info></app-info>
 			</mat-tab>
 		</mat-tab-group>
-        <!-- Tabs for Customer -->
-        <mat-tab-group *ngIf="customerstate=='customer'">
+
+        <mat-tab-group *ngIf="customerstate=='customer'" [(selectedIndex)]="util.selIndex">
 			<mat-tab>
-			<ng-template mat-tab-label>
+				<ng-template mat-tab-label>
 					<mat-icon>home</mat-icon> Calendar
 				</ng-template>
 				<app-front-page></app-front-page>
 			</mat-tab>
+
 			<mat-tab>
 				<ng-template mat-tab-label>
-					<mat-icon>art_track</mat-icon> Services
+					<mat-icon>art_track</mat-icon> Service providers
 				</ng-template>
-				<app-servicelist></app-servicelist>
+				<app-providers-list></app-providers-list>
 			</mat-tab>
+
 		</mat-tab-group>
+
 		<div class="card text-center">
 			<div class="card-footer text-muted">
 				<p>BookIt</p>

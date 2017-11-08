@@ -11,7 +11,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 // Import the NgModule for each component you want to use:
 import { 	MatButtonModule, MatCheckboxModule, MatListModule, MatToolbarModule,
 					MatTabsModule, MatIconModule, MatInputModule, MatSnackBarModule,
-					MatExpansionModule } from '@angular/material';
+					MatExpansionModule, MatDatepickerModule, MatCardModule } from '@angular/material';
 // Components
 import { AppComponent } from './app.component';
 import { InfoComponent } from './info/info.component';
@@ -20,10 +20,9 @@ import { GmapComponent} from './gmap/gmap.component';
 import { GeolocationService } from './services/geolocation.service';
 import { environment } from '../environments/environment';
 import { ServiceComponent } from './service/service.component';
-import { ServicelistComponent } from './servicelist/servicelist.component';
-
+import { Globals } from './globals.service';
+import { ProvidersListComponent } from './providers-list/providers-list.component';
 // Services
-
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -31,7 +30,7 @@ import { ServicelistComponent } from './servicelist/servicelist.component';
 		FrontPageComponent,
 		GmapComponent,
 		ServiceComponent,
-		ServicelistComponent,
+		ProvidersListComponent,
 		],
 	imports: [
 		NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyAI368OuKSOMpfH9xNYwdnpe6HGUI_-VVg'}),
@@ -50,9 +49,10 @@ import { ServicelistComponent } from './servicelist/servicelist.component';
 		MatSnackBarModule,
 		MatExpansionModule,
 		ReactiveFormsModule,
+		MatCardModule,
 		CarouselModule.forRoot()
 	],
-	providers: [GeolocationService],
-	bootstrap: [AppComponent]
+	providers: [GeolocationService, Globals],
+	bootstrap: [AppComponent],
 })
 export class AppModule { }
