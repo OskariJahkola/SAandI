@@ -20,6 +20,7 @@ import { GmapComponent} from './gmap/gmap.component';
 import { GeolocationService } from './services/geolocation.service';
 import { environment } from '../environments/environment';
 import { ServiceComponent } from './service/service.component';
+import { ServicelistComponent } from './servicelist/servicelist.component';
 
 // Services
 
@@ -30,6 +31,7 @@ import { ServiceComponent } from './service/service.component';
 		FrontPageComponent,
 		GmapComponent,
 		ServiceComponent,
+		ServicelistComponent,
 		],
 	imports: [
 		NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyAI368OuKSOMpfH9xNYwdnpe6HGUI_-VVg'}),
