@@ -1,1 +1,39 @@
 // This is a very janky fix for accordions to work when generated out of view
+.containter {
+    text-align: center;
+}
+.example-card {
+    margin: auto;
+    width: 98%;
+    margin: 10px 10px 40px 10px;
+}
+.example-header-image {
+    width: 70px;
+    height: 70px;
+  background-image: url('../../assets/masseur.png');
+  background-size: cover;
+}
+
+
+.cleft {
+    width: 200px;
+    height: 150px;
+    flex: 1;
+    text-align: justify;
+}
+.cright {
+    height: 250px;
+    width: 250px;
+    margin-left: 30px;
+    padding: 10px;
+    // background-image: url('../../assets/massage-circle.png');
+    // background-size: cover;
+}
+.content-parent {
+    display: flex;
+    flex-direction: row wrap;
+}
+mat-card-title {
+    font-size: 50px;
+    font-weight: bolder;
+}
