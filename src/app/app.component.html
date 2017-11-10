@@ -26,6 +26,12 @@
 				</ng-template>
 				<app-info></app-info>
 			</mat-tab>
+			<mat-tab>
+					<ng-template mat-tab-label>
+						<mat-icon>assignment</mat-icon> Requests
+					</ng-template>
+					<app-requests></app-requests>
+				</mat-tab>
 		</mat-tab-group>
 
         <mat-tab-group *ngIf="customerstate=='customer'" [(selectedIndex)]="util.selIndex">

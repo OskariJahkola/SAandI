@@ -22,6 +22,7 @@ import { environment } from '../environments/environment';
 import { ServiceComponent } from './service/service.component';
 import { Globals } from './globals.service';
 import { ProvidersListComponent } from './providers-list/providers-list.component';
+import { RequestsComponent } from './requests/requests.component';
 // Services
 @NgModule({
 	declarations: [
@@ -31,6 +32,7 @@ import { ProvidersListComponent } from './providers-list/providers-list.componen
 		GmapComponent,
 		ServiceComponent,
 		ProvidersListComponent,
+		RequestsComponent,
 		],
 	imports: [
 		NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyAI368OuKSOMpfH9xNYwdnpe6HGUI_-VVg'}),
