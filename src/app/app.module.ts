@@ -23,6 +23,7 @@ import { ServiceComponent } from './service/service.component';
 import { Globals } from './globals.service';
 import { ProvidersListComponent } from './providers-list/providers-list.component';
 import { RequestsComponent } from './requests/requests.component';
+import { WellnessServiceComponent } from './wellness-service/wellness-service.component';
 // Services
 @NgModule({
 	declarations: [
@@ -33,6 +34,7 @@ import { RequestsComponent } from './requests/requests.component';
 		ServiceComponent,
 		ProvidersListComponent,
 		RequestsComponent,
+		WellnessServiceComponent,
 		],
 	imports: [
 		NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyAI368OuKSOMpfH9xNYwdnpe6HGUI_-VVg'}),

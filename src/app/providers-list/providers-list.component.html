@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container"  *ngIf="glob.serviceSelected==false">
     <!-- #### provider 1 #### -->
     <mat-card class="example-card">
         <mat-card-header>
@@ -37,7 +37,7 @@
             </div>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button >Book this service</button>
+            <button mat-raised-button (click)="wellnessClick()">Book this service</button>
         </mat-card-actions>
         <mat-card-footer>
             <ul>
@@ -62,13 +62,13 @@
                 <div class="cleft">
                     <p>
                         Tasty Catering makes delicious cuisine for all events - straighforward and with expertise.
-                        Catering services offers excuisite food for even the most demanding taste pallets. We only use pure and 
+                        Catering services offers excuisite food for even the most demanding taste pallets. We only use pure and
                         quality foods. You are also able to book a chef and waiters for parties and events.
                     </p>
                     <p>
 
                         Tasty Catering has served satisfied customers for over five years, starting out in the capital area
-                        but quickly exanpding to other regions in Finland as well. Tasty Catering currently employs 100 happy 
+                        but quickly exanpding to other regions in Finland as well. Tasty Catering currently employs 100 happy
                         emplyees all around Finland.
                     </p>
                     <p>
@@ -107,16 +107,16 @@
                         Our talented musicians provide excellent quality music for any event! From birthday parties,
                         weddings, graduations to playing for senior citizens, we fit them all!
 
-                        We believe that music connects us in the deepest way possible, just like any great therapy. And as 
+                        We believe that music connects us in the deepest way possible, just like any great therapy. And as
                         we are too many count, we have different reactions to different genres, hence our service of providing any
-                        genre to your fitting. 
-                        
+                        genre to your fitting.
+
                         Please join us, in the magic world of music and transend into a full relaxation and enjoy your moment!
                     </p>
                     <p>
                         Purity Music has founded by a small local band in Lappeenranta, who believed in the power of music. Wanting
                         to cover all genres and in that way be able to provide to everyones need, the small company quickly expanded
-                        to acquire talents from all corners of the nation, currently empolying 50 talented individuals. 
+                        to acquire talents from all corners of the nation, currently empolying 50 talented individuals.
                     </p>
                     <p>
                         Also available on all major holidays!
@@ -148,9 +148,9 @@
             <div class="content-parent">
                 <div class="cleft">
                     <p>
-                        We believe that moving is the best medication for a long happy life. By adding a few hours of 
+                        We believe that moving is the best medication for a long happy life. By adding a few hours of
                         activities throughout your week, your adding years to your life. By providing a carefully individualized
-                        training plan anyone can have an active life, and more over a happy life. Our goal in life is to be able 
+                        training plan anyone can have an active life, and more over a happy life. Our goal in life is to be able
                         to make people healthly, no matter what the starting point is.
                     </p>
                     <p>
@@ -182,4 +182,8 @@
             </ul>
         </mat-card-footer>
     </mat-card>
+</div>
+
+<div class="container" *ngIf="glob.serviceSelected">
+    <app-wellness-service></app-wellness-service>
 </div>

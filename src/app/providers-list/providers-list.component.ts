@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { WellnessServiceComponent } from '../wellness-service/wellness-service.component';
+import { Globals } from '../globals.service'
 
 @Component({
   selector: 'app-providers-list',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProvidersListComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private glob:Globals) { }
   ngOnInit() {
+  }
+
+  wellnessClick()
+  {
+      this.glob.serviceSelected = true;
   }
 
 }

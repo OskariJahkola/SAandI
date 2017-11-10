@@ -4,4 +4,5 @@ import { Injectable } from '@angular/core';
 export class Globals
 {
     selIndex: number = 0;
+    serviceSelected: boolean = false;
 }
