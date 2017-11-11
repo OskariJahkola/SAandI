@@ -16,5 +16,13 @@ export class WellnessServiceComponent implements OnInit {
   bookWellness()
   {
       this.glob.serviceSelected = false;
+      if (!this.glob.serviceSelected)
+      {
+          console.log("going back FROM wellness service");
+      }
+      else
+      {
+          console.log("this is not supposed to happend (FROM wellness)");
+      }
   }
 }
