@@ -24,7 +24,6 @@ import { Globals } from './globals.service';
 import { ProvidersListComponent } from './providers-list/providers-list.component';
 import { RequestsComponent } from './requests/requests.component';
 import { WellnessServiceComponent } from './wellness-service/wellness-service.component';
-import { CalendarModule } from 'angular-calendar';
 
 // Services
 @NgModule({
@@ -57,7 +56,6 @@ import { CalendarModule } from 'angular-calendar';
 		ReactiveFormsModule,
 		MatCardModule,
 		CarouselModule.forRoot(),
-		CalendarModule.forRoot(),
 	],
 	providers: [GeolocationService, Globals],
 	bootstrap: [AppComponent],
