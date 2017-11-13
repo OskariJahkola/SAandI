@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Globals } from '../globals.service'
+import { Globals } from '../globals.service';
+import { FormBuilder, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-wellness-service',
@@ -7,22 +9,33 @@ import { Globals } from '../globals.service'
   styleUrls: ['./wellness-service.component.scss']
 })
 export class WellnessServiceComponent implements OnInit {
-
-  constructor(private glob:Globals) { }
+    pageContent: string = "booking-info";
+  constructor(private glob:Globals, public fb: FormBuilder) { }
 
   ngOnInit() {
   }
 
-  bookWellness()
+  goBack()
   {
-      this.glob.serviceSelected = false;
-      if (!this.glob.serviceSelected)
+      if (this.pageContent == "booking-info")
       {
-          console.log("going back FROM wellness service");
+          this.glob.serviceSelected = "none";
       }
-      else
+      else if (this.pageContent == "contact-wellness")
       {
-          console.log("this is not supposed to happend (FROM wellness)");
+          this.pageContent = "booking-info";
       }
   }
+
+  contactProvider()
+  {
+      this.pageContent = "contact-wellness";
+      console.log("show contact form please");
+  }
+
+  sendMessage()
+  {
+      this.pageContent = "booking-info";
+  }
+
 }

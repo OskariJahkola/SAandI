@@ -1,9 +1,14 @@
 <div class="page">
+    <button mat-raised-button class="page-button" (click)="goBack()" >
+        <mat-icon>keyboard_arrow_left</mat-icon>
+        <span>   Go back</span>
+    </button>
     <div class="header-area">
         <h1>Liangtse Wellness</h1>
         <h2>Wide range of stress relieving treatment</h2>
     </div>
-    <div class="info-area">
+
+    <div class="info-area" *ngIf="pageContent=='booking-info'">
         <img src="assets/massage-circle.png" alt="Liangtse wellness massage">
         <p>
             Our wide range of stress relieving, vitality enhancing and rebalancing
@@ -25,8 +30,38 @@
         <p>
             Of course you can use the purchased gift vouchers at each center. Welcome!
         </p>
-        <h2>Booking information</h2>
-
+        <h2>Booking information:</h2>
+        <p>Service available at theese times:</p>
+        <ul>
+            <li>Weekdays: 8:00 - 18:00</li>
+            <li>Saturday: 10:00 - 15:30</li>
+            <li>Sundays: closed</li>
+        </ul>
+        <p>Check the calendar for available date and hour of appointment</p>
+        <h2>Liangtse Wellness booking calendar</h2>
+        <iframe  allowTransparency="true" src="https://www.keepandshare.com/calendar18/show.php?i=2739020&em=y&style=r&fmt=std&startdate=&soffset=0&n=7&h=&w=&dbc=&hc=&htc=&tbc=&tbtc=&ltc=&pdc=&tc=&fdc=&wdc=&ntc=&mntc=&mnbc=&mbtc=&sr=y&navicon=caret&fsz=11&nav=y&print=n&ac=y&sparse=n&lang=&frw=&frh=&rw=460&rh=310&frs=no&ifr=y" width="100%" height="500px" scrolling="no" frameborder="0"></iframe>
+        <!-- For help on embedding calendars go to http://developer.keepandshare.com/embedding/day-scroll-calendar.php -->
+        <div class="footer-area">
+            <button mat-raised-button width="500px" (click)="contactProvider()">
+                <mat-icon>email</mat-icon>
+                <span>   Contact service provider</span>
+            </button>
+        </div>
     </div>
-    <button mat-raised-button (click)="bookWellness()">Book this service</button>
+
+    <div class="info-area" *ngIf="pageContent=='contact-wellness'">
+            <div class="contact-form">
+                <mat-form-field>
+                    <input matInput placeholder="Message title *" type="title">
+                </mat-form-field>
+
+                <mat-form-field>
+                    <textarea matInput placeholder="Textarea" type="text"></textarea>
+                </mat-form-field>
+            </div>
+            <button mat-raised-button (click)="sendMessage()" type="submit">
+                <mat-icon>send</mat-icon>
+                <span>   Send message</span>
+            </button>
+    </div>
 </div>

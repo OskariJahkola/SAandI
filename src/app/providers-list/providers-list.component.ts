@@ -15,8 +15,8 @@ export class ProvidersListComponent implements OnInit {
 
   wellnessClick()
   {
-      this.glob.serviceSelected = true;
-      if (this.glob.serviceSelected)
+      this.glob.serviceSelected = "wellness";
+      if (this.glob.serviceSelected == "wellness")
       {
           console.log("going TO wellness service");
       }
