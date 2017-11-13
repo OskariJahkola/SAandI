@@ -26,4 +26,19 @@ export class ProvidersListComponent implements OnInit {
       }
   }
 
+  cateringClick()
+  {
+      this.glob.serviceSelected = "catering";
+  }
+
+  musicClick()
+  {
+      this.glob.serviceSelected = "music";
+  }
+
+  lifeClick()
+  {
+      this.glob.serviceSelected = "life";
+  }
+
 }

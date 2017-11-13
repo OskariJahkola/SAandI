@@ -1,3 +1,63 @@
-<p>
-  music-service works!
-</p>
+<div class="page">
+    <button mat-raised-button class="page-button" (click)="goBack()" >
+        <mat-icon>keyboard_arrow_left</mat-icon>
+        <span>   Go back</span>
+    </button>
+    <div class="header-area">
+        <h1>Purity Music</h1>
+        <h2>From mellow tunes to funcky riffs, we play them all!</h2>
+    </div>
+
+    <div class="info-area" *ngIf="pageContent=='booking-info'">
+        <img mat-card-image src="assets/music.jpg" alt="Liangtse wellness massage">
+        <p>
+            Our talented musicians provide excellent quality music for any event! From birthday parties,
+            weddings, graduations to playing for senior citizens, we fit them all!
+
+            We believe that music connects us in the deepest way possible, just like any great therapy. And as
+            we are too many count, we have different reactions to different genres, hence our service of providing any
+            genre to your fitting.
+
+            Please join us, in the magic world of music and transend into a full relaxation and enjoy your moment!
+        </p>
+        <p>
+            Purity Music has founded by a small local band in Lappeenranta, who believed in the power of music. Wanting
+            to cover all genres and in that way be able to provide to everyones need, the small company quickly expanded
+            to acquire talents from all corners of the nation, currently empolying 50 talented individuals.
+        </p>
+        <p>
+            Also available on all major holidays!
+        </p>
+        <h2>Booking information:</h2>
+        <p>Service available at theese times:</p>
+        <ul>
+            <li>Weekdays: 8:00 - 18:00</li>
+            <li>Saturday: 10:00 - 15:30</li>
+            <li>Sundays: closed</li>
+        </ul>
+        <p>Check the calendar for available date and hour of appointment</p>
+        <h2>Liangtse Wellness booking calendar</h2>
+        <div class="footer-area">
+            <button mat-raised-button width="500px" (click)="contactProvider()">
+                <mat-icon>email</mat-icon>
+                <span>   Contact service provider</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="info-area" *ngIf="pageContent=='contact-music'">
+            <div class="contact-form">
+                <mat-form-field>
+                    <input matInput placeholder="Message title *" type="title">
+                </mat-form-field>
+
+                <mat-form-field>
+                    <textarea matInput placeholder="Textarea" type="text"></textarea>
+                </mat-form-field>
+            </div>
+            <button mat-raised-button (click)="sendMessage()" type="submit">
+                <mat-icon>send</mat-icon>
+                <span>   Send message</span>
+            </button>
+    </div>
+</div>

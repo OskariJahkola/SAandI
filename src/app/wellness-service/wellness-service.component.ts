@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Globals } from '../globals.service';
-import { FormBuilder, Validators } from '@angular/forms';
-
 
 @Component({
   selector: 'app-wellness-service',
@@ -9,12 +7,12 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./wellness-service.component.scss']
 })
 export class WellnessServiceComponent implements OnInit {
-    pageContent: string = "booking-info";
-  constructor(private glob:Globals, public fb: FormBuilder) { }
+  constructor(private glob:Globals) { }
 
   ngOnInit() {
   }
 
+  pageContent: string = "booking-info";
   goBack()
   {
       if (this.pageContent == "booking-info")

@@ -81,7 +81,7 @@
             </div>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button>Booking and information</button>
+            <button mat-raised-button (click)="cateringClick()">Booking and information</button>
         </mat-card-actions>
         <mat-card-footer>
             <ul>
@@ -128,7 +128,7 @@
             </div>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button>Booking and information</button>
+            <button mat-raised-button (click)="musicClick()">Booking and information</button>
         </mat-card-actions>
         <mat-card-footer>
             <ul>
@@ -171,7 +171,7 @@
             </div>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button>Booking and information</button>
+            <button mat-raised-button (click)="lifeClick()">Booking and information</button>
         </mat-card-actions>
         <mat-card-footer>
             <ul>
@@ -186,4 +186,13 @@
 
 <div class="container" *ngIf="glob.serviceSelected=='wellness'">
     <app-wellness-service></app-wellness-service>
+</div>
+<div class="container" *ngIf="glob.serviceSelected=='catering'">
+    <app-catering-service></app-catering-service>
+</div>
+<div class="container" *ngIf="glob.serviceSelected=='music'">
+    <app-music-service></app-music-service>
+</div>
+<div class="container" *ngIf="glob.serviceSelected=='life'">
+    <app-life-service></app-life-service>
 </div>

@@ -1,3 +1,62 @@
-<p>
-  life-service works!
-</p>
+<div class="page">
+    <button mat-raised-button class="page-button" (click)="goBack()" >
+        <mat-icon>keyboard_arrow_left</mat-icon>
+        <span>   Go back</span>
+    </button>
+    <div class="header-area">
+        <h1>Activate for Life</h1>
+        <h2>We keep you fit for life</h2>
+    </div>
+
+    <div class="info-area" *ngIf="pageContent=='booking-info'">
+        <img mat-card-image src="assets/train.png" alt="Liangtse wellness massage">
+        <p>
+            We believe that moving is the best medication for a long happy life. By adding a few hours of
+            activities throughout your week, your adding years to your life. By providing a carefully individualized
+            training plan anyone can have an active life, and more over a happy life. Our goal in life is to be able
+            to make people healthly, no matter what the starting point is.
+        </p>
+        <p>
+            We have a 100 % gaurantee, that you will be satisfied with our program!
+        </p>
+        <p>
+            Activate for life began their story in Kajaani, Finlad. Their founder, Juhani Muhani, used to weigh 162 kg,
+            smoked three packs a day, and was severly depressed. After a moment of clarity, he changed his lifestyle completely
+            and now employes over 1000 Activate for life-coaches all around the nordic countries.
+        </p>
+        <p>
+            Not satisfied? We will pay your money back!
+        </p>
+        <h2>Booking information:</h2>
+        <p>Service available at theese times:</p>
+        <ul>
+            <li>Weekdays: 8:00 - 18:00</li>
+            <li>Saturday: 10:00 - 15:30</li>
+            <li>Sundays: closed</li>
+        </ul>
+        <p>Check the calendar for available date and hour of appointment</p>
+        <h2>Liangtse Wellness booking calendar</h2>
+        <div class="footer-area">
+            <button mat-raised-button width="500px" (click)="contactProvider()">
+                <mat-icon>email</mat-icon>
+                <span>   Contact service provider</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="info-area" *ngIf="pageContent=='contact-life'">
+            <div class="contact-form">
+                <mat-form-field>
+                    <input matInput placeholder="Message title *" type="title">
+                </mat-form-field>
+
+                <mat-form-field>
+                    <textarea matInput placeholder="Textarea" type="text"></textarea>
+                </mat-form-field>
+            </div>
+            <button mat-raised-button (click)="sendMessage()" type="submit">
+                <mat-icon>send</mat-icon>
+                <span>   Send message</span>
+            </button>
+    </div>
+</div>
