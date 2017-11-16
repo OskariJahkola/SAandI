@@ -11,7 +11,7 @@ import { Globals } from './globals.service'
 })
 export class AppComponent {
 	title = 'Recycle4Me';
-    customerstate='customer';
+    customerstate: string ='customer';
 
 	constructor(public afAuth: AngularFireAuth, private util:Globals) {
 		util.selIndex = 0;
@@ -33,13 +33,16 @@ export class AppComponent {
 	logout() {
 		this.afAuth.auth.signOut();
 	}
-    switchService() {
-        this.customerstate='service';
+    switchToService() {
+        this.customerstate='service-registration';
     }
     switchCustomer() {
         this.customerstate='customer';
     }
 	action() {
 		this.util.selIndex = 0;
+	}
+	loginProvider() {
+		this.customerstate='service-account'
 	}
 }
