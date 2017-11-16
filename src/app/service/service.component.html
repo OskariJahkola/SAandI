@@ -1,4 +1,20 @@
-<div class="container">
-    <iframe src="https://calendar.google.com/calendar/embed?src=saai.lut.2017%40gmail.com&ctz=Europe%2FHelsinki" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-	
-  </div>
+<div class="container" *ngIf="addEvent==false">
+    <div class="profile">
+      <div class="profile-left">
+        <h1>Liangtse Wellness, logged into BookIT</h1>
+      </div>
+      <div class="profile-right">
+          <img src="/assets/masseur-profile.png" id="profile-pic" width="200">
+          <span class="pic-label">Liangtse Wellness</span>
+      </div>
+    </div>
+  
+    <div class="row" id="calendar-section">
+      <div class="calendar">
+        <iframe
+        src="//kvisit.com/pzJanAQ/xTUtKg,1,vmJgoNVyLVB66J81w7tI0Tkpm3wCwL0IueM2zviVCy8&ifr=y&colorreset=y&vw=month&themeChoice=4&dbc=383030&hc=383030&htc=ffffff&mntc=593733&mbtc=ffffff&mbc=7f6d54&pdc=F6E6C6&tc=FFFFFF&fdc=FFFFFF&dehc=593733&dehtc=ffffff&md=30&nopopup=n&fsz=15&noviewmenu=y&noname=y&nobreak=y&noprint=y&norequest=n&nosearch=y&norss=n&noovl=y&notz=y&fd=y&sa=y&exedit=n&nonav=n"
+        style="width:800px;height:800px;overflow-y:auto;border:1px solid silver"
+        scrolling="yes">
+      </iframe>
+      </div>
+    </div>
