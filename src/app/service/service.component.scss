@@ -1,9 +1,11 @@
 .col_left, .col_right {
     width: 15%;
 }
+
 .col_middle {
     width: 70%;
 }
+
 .img {
     max-width: 400px;
     max-height: 400px;
@@ -12,4 +14,31 @@
     font-family: 'Rozha One';
     font-size: 48px;
 
+}
+
+.profile-left
+{
+    padding: 20px;
+    float: left;
+    max-width: 500px;
+}
+
+.profile-right
+{
+    text-align: right;
+    margin-top: 10px;
+}
+
+.pic-label
+{
+    display: block;
+    padding-top: 10px;
+    padding-right: 40px;
+    font-weight: bold;
+}
+
+#calendar-section
+{
+    padding: 20px;
+    background-color: white;
 }

@@ -17,8 +17,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 export class ServiceComponent implements OnInit {
 
   constructor() { }
-
-  ngOnInit() {
+	ngOnInit() {
   }
-
+  
+	addEvent: boolean = false;
 }
