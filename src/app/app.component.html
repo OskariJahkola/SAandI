@@ -6,7 +6,12 @@
 			<div *ngIf="customerstate=='customer'">
                 <button class="buttonPad" type="button" mat-raised-button (click)="switchToService()">Switch to Service Provider</button>
 			</div>
-            <div *ngIf="customerstate=='service-registration' || customerstate=='service-account'">
+            <div *ngIf="customerstate=='service-registration'">
+				<button class="buttonPad" type="button" mat-raised-button (click)="loginProvider()">Login</button>
+                <button class="buttonPad" type="button" mat-raised-button (click)="switchCustomer()">Switch to Customer</button>
+			</div>
+			<div *ngIf="customerstate=='service-account'">
+				<button class="buttonPad" type="button" mat-raised-button (click)="logoutProvider()">Logout</button>
                 <button class="buttonPad" type="button" mat-raised-button (click)="switchCustomer()">Switch to Customer</button>
 			</div>
 		</mat-toolbar>

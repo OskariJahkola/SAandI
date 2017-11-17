@@ -45,4 +45,7 @@ export class AppComponent {
 	loginProvider() {
 		this.customerstate='service-account'
 	}
+	logoutProvider() {
+		this.customerstate='service-registration'
+	}
 }
