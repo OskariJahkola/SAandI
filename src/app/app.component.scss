@@ -76,6 +76,9 @@ mat-toolbar {
 	display: flex;
 	flex-direction: column;
 	input {
-		width: 300px;
+		width: auto;
+	}
+	button {
+		width: 200px;
 	}
 }

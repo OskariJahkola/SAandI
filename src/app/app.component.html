@@ -6,7 +6,7 @@
 			<div *ngIf="customerstate=='customer'">
                 <button class="buttonPad" type="button" mat-raised-button (click)="switchToService()">Switch to Service Provider</button>
 			</div>
-            <div *ngIf="customerstate=='service'">
+            <div *ngIf="customerstate=='service-registration' || customerstate=='service-account'">
                 <button class="buttonPad" type="button" mat-raised-button (click)="switchCustomer()">Switch to Customer</button>
 			</div>
 		</mat-toolbar>
@@ -15,10 +15,17 @@
 			<!-- REGISTRATION PAGE TABS -->
 		<mat-tab-group *ngIf="customerstate=='service-registration'">
 			<mat-tab>
-			<ng-template mat-tab-label>
-					<mat-icon>person_add</mat-icon> Create account
+				<ng-template mat-tab-label>
+					<mat-icon>home</mat-icon> About us
 				</ng-template>
-			<app-service></app-service>
+			<app-about-bookit></app-about-bookit>
+			</mat-tab>
+			<mat-tab>
+				<ng-template mat-tab-label>
+					<mat-icon>person_add</mat-icon> Become member
+				</ng-template>
+				<app-register-provider></app-register-provider>
+			<!-- <app-service></app-service> -->
 			</mat-tab>
 			<mat-tab>
 				<ng-template mat-tab-label>
@@ -31,8 +38,8 @@
 					<mat-form-field>
 						<input matInput placeholder="password *" type="password">
 					</mat-form-field>
+					<button class="buttonPad" type="button" mat-raised-button (click)="loginProvider()">Login</button>
 	            </div>
-				<button class="buttonPad" type="button" mat-raised-button (click)="loginProvider()">Login</button>
 			</mat-tab>
 		</mat-tab-group>
 
