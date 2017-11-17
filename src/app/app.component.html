@@ -1,19 +1,50 @@
 <div class="wrapper">
 	<div class="container">
 		<mat-toolbar color="primary">
-
 			<img src="/assets/logo.png" width="7.5%">
 			<div class="toolbar-spacer"></div>
 			<div *ngIf="customerstate=='customer'">
-                <button class="buttonPad" type="button" mat-raised-button (click)="switchService()">Switch to Service Provider</button>
+                <button class="buttonPad" type="button" mat-raised-button (click)="switchToService()">Switch to Service Provider</button>
 			</div>
-            <div *ngIf="customerstate=='service'">
+            <div *ngIf="customerstate=='service-registration' || customerstate=='service-account'">
                 <button class="buttonPad" type="button" mat-raised-button (click)="switchCustomer()">Switch to Customer</button>
 			</div>
-
 		</mat-toolbar>
 
-        <mat-tab-group *ngIf="customerstate=='service'">
+			<!-- ###################### -->
+			<!-- REGISTRATION PAGE TABS -->
+		<mat-tab-group *ngIf="customerstate=='service-registration'">
+			<mat-tab>
+				<ng-template mat-tab-label>
+					<mat-icon>home</mat-icon> About us
+				</ng-template>
+			<app-about-bookit></app-about-bookit>
+			</mat-tab>
+			<mat-tab>
+				<ng-template mat-tab-label>
+					<mat-icon>person_add</mat-icon> Become member
+				</ng-template>
+				<app-register-provider></app-register-provider>
+			</mat-tab>
+			<mat-tab>
+				<ng-template mat-tab-label>
+					<mat-icon>login</mat-icon> Login
+				</ng-template>
+				<div class="login-form">
+					<mat-form-field>
+						<input matInput placeholder="Name *" type="text">
+					</mat-form-field>
+					<mat-form-field>
+						<input matInput placeholder="Password *" type="password">
+					</mat-form-field>
+					<button class="buttonPad" type="button" mat-raised-button (click)="loginProvider()">Login</button>
+	            </div>
+			</mat-tab>
+		</mat-tab-group>
+
+			<!-- ########################## -->
+			<!-- SERVICE PROVIDER PAGE TABS -->
+        <mat-tab-group *ngIf="customerstate=='service-account'">
 			<mat-tab>
 			<ng-template mat-tab-label>
 					<mat-icon>home</mat-icon> Calendar
@@ -34,6 +65,8 @@
 				</mat-tab>
 		</mat-tab-group>
 
+			<!-- ################## -->
+			<!-- CUSTOMER PAGE TABS -->
         <mat-tab-group *ngIf="customerstate=='customer'" [(selectedIndex)]="util.selIndex">
 			<mat-tab>
 				<ng-template mat-tab-label>

@@ -27,6 +27,8 @@ import { WellnessServiceComponent } from './wellness-service/wellness-service.co
 import { CateringServiceComponent } from './catering-service/catering-service.component';
 import { MusicServiceComponent } from './music-service/music-service.component';
 import { LifeServiceComponent } from './life-service/life-service.component';
+import { RegisterProviderComponent } from './register-provider/register-provider.component';
+import { AboutBookitComponent } from './about-bookit/about-bookit.component';
 
 // Services
 @NgModule({
@@ -42,6 +44,8 @@ import { LifeServiceComponent } from './life-service/life-service.component';
 		CateringServiceComponent,
 		MusicServiceComponent,
 		LifeServiceComponent,
+		RegisterProviderComponent,
+		AboutBookitComponent,
 		],
 	imports: [
 		NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyAI368OuKSOMpfH9xNYwdnpe6HGUI_-VVg'}),

@@ -1,0 +1,28 @@
+<div class="page">
+    <div class="header-area">
+        <h1>New service provider registration</h1>
+    </div>
+
+    <div class="info-area">
+        <div class="contact-form">
+            <mat-form-field>
+                <input matInput placeholder="Service name *" type="text" />
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Short description *" type="text" />
+            </mat-form-field>
+
+            <mat-form-field>
+                <textarea matInput placeholder="Full description" type="text"></textarea>
+            </mat-form-field>
+            <div class="mat-img">
+                <span>Image:</span>
+                <input type="file" (change)="fileChangeEvent($event)" placeholder="Upload file..." />
+            </div>
+        </div>
+        <button mat-raised-button (click)="sendMessage()" type="submit">
+            <mat-icon>assignment_turned_in</mat-icon>
+            <span>   Confirm registration</span>
+        </button>
+    </div>
+</div>
