@@ -29,6 +29,7 @@ import { MusicServiceComponent } from './music-service/music-service.component';
 import { LifeServiceComponent } from './life-service/life-service.component';
 import { RegisterProviderComponent } from './register-provider/register-provider.component';
 import { AboutBookitComponent } from './about-bookit/about-bookit.component';
+import { MessagesComponent } from './messages/messages.component';
 
 // Services
 @NgModule({
@@ -46,6 +47,7 @@ import { AboutBookitComponent } from './about-bookit/about-bookit.component';
 		LifeServiceComponent,
 		RegisterProviderComponent,
 		AboutBookitComponent,
+		MessagesComponent,
 		],
 	imports: [
 		NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyAI368OuKSOMpfH9xNYwdnpe6HGUI_-VVg'}),
