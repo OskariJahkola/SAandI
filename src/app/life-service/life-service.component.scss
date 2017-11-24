@@ -47,3 +47,31 @@ h2 {
 .contact-form > * {
   width: 100%;
 }
+
+div.mat-expansion-panel-content:not(.mat-expanded) {
+	height: 0px;
+	visibility: hidden;
+}
+
+.mat-expansion-panel-header:not(.mat-expanded)  {
+	height: 48px;
+}
+
+.mat-expansion-panel-header  {
+	height: 64px;
+	.mat-content {
+			font-size: 18px;
+	}
+	&.mat-expanded {
+			.mat-expansion-indicator {
+					transform: rotate(180deg);
+			}
+	}
+}
+
+.buttons {
+    text-align: right;
+}
+.acordion {
+	margin: 30px 10px 15px 10px;
+}
