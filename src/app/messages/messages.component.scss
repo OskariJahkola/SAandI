@@ -12,7 +12,7 @@ div.mat-expansion-panel-content:not(.mat-expanded) {
 	.mat-content {
 			font-size: 18px;
 	}
-	&.mat-expanded {        
+	&.mat-expanded {
 			.mat-expansion-indicator {
 					transform: rotate(180deg);
 			}
@@ -21,4 +21,7 @@ div.mat-expansion-panel-content:not(.mat-expanded) {
 
 .buttons {
     text-align: right;
+}
+.acordion {
+	margin-bottom: 20px;
 }
