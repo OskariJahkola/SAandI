@@ -12,9 +12,8 @@
 	<div class="row" id="calendar-section">
 		<div class="calendar">
 			<iframe
-			src="//kvisit.com/pzJanAQ/gDaOkw,1,2kKv-Lo6l1fgXwnx0n940O-vI1SbxplAiImvHya_q0I&ifr=y&colorreset=y&vw=month&themeChoice=777&dbc=D9D9D9&hc=FFFFFF&htc=000000&mntc=593733&mbtc=000000&mbc=FFC107&pdc=F0EFE7&tc=FDFFDC&fdc=FFFFFF&dehc=F0EFE7&dehtc=000000&md=30&nopopup=y&fsz=16&noviewmenu=y&noname=y&nobreak=y&noprint=y&norequest=y&nosearch=y&norss=n&noovl=y&notz=y&fd=y&sa=y&exedit=n&nonav=n"
-			style="border:1px solid silver;overflow-y:hidden" width="100%" height="800px" frameborder="0" scrolling="no">
-
+				src="//kvisit.com/H6KGnAQ/TaMfKA,1,tKfSRFHBo75x_JKfFGyG54EaSfn32MeXOj1qO9ThfE8&ifr=y&colorreset=y&vw=month&themeChoice=777&dbc=D9D9D9&hc=FFFFFF&htc=000000&mntc=593733&mbtc=000000&mbc=FFC107&pdc=F0EFE7&tc=FDFFDC&fdc=FFFFFF&dehc=F0EFE7&dehtc=000000&md=30&nopopup=y&fsz=16&noviewmenu=y&noname=y&nobreak=y&noprint=y&norequest=y&nosearch=y&norss=n&noovl=y&notz=y&fd=y&sa=y&exedit=n&nonav=n"
+				style="border:0px;overflow-y:hidden" width="100%" height="700px" frameborder="0" scrolling="no">
 			</iframe>
 		</div>
 		<div class="text-cover"></div>
@@ -22,49 +21,26 @@
 
 		<!-- ################ -->
 	<div class="events-list">
-		<h2>Your events for the next 2 weeks:</h2>
-		<mat-list>
-			<mat-list-item>
-				<h4 mat-line>Doctor appointment</h4>
-				<p mat-line>7.11.20127, 14:00</p>
-			</mat-list-item>
-			<mat-divider></mat-divider>
-			<mat-list-item>
-				<h4 mat-line>Rehab at the swimming pool</h4>
-				<p mat-line>9.11.2017, 10:00</p>
-			</mat-list-item>
-			<mat-divider></mat-divider>
-			<mat-list-item>
-				<h4 mat-line>Take heart medications</h4>
-				<p mat-line>10.11.2017, 09:00</p>
-			</mat-list-item>
-			<mat-divider></mat-divider>
-			<mat-list-item>
-				<h4 mat-line>Meeting SP2</h4>
-				<p mat-line>11.11.2017, 19:00</p>
-			</mat-list-item>
-			<mat-divider></mat-divider>
-			<mat-list-item>
-				<h4 mat-line>Meeting SP1</h4>
-				<p mat-line>12.11.2017, 16:00</p>
-			</mat-list-item>
-			<mat-divider></mat-divider>
-			<mat-list-item>
-				<h4 mat-line>Take heart medications</h4>
-				<p mat-line>17.11.2017, 09:00</p>
-			</mat-list-item>
-			<mat-divider></mat-divider>
-		</mat-list>
+		<h2>Your next 7 events:</h2>
+		<iframe allowTransparency="true"
+		src="//kvisit.com/H6KGnAQ/t4-BRg,1,wtAFNTl4JllYJWzrm4UEII9Ifj7Br44Dg9Yhi7fH4Ss&em=y&style=v&fmt=flag&startdate=&soffset=0&n=7&h=&w=&dbc=&hc=FFC107&htc=000000&tbc=&tbtc=&ltc=&pdc=&tc=FDFFDC&fdc=FFFFFF&wdc=&ntc=&mntc=&mnbc=&mbtc=&sr=n&navicon=caret&fsz=16&nav=n&print=n&ac=n&sparse=y&lang=&frw=800&frh=&rw=460&rh=310&frs=no&ifr=y"
+		width="100%" height="430px" scrolling="no" frameborder="0">
+		</iframe>
 	</div>
 
-
-<br />
-<br />
-
-	<div class="row">
+	<div class="box">
+		<p>If you want to add any <strong>custom</strong> events,
+			go and interact with monthly calendar directly.
+		</p>
+		<p>
+			If you want to go through a list of available service providers,
+		 	continue to the booking section.
+		</p>
 		<div class="service-button">
-			<button type="button" class="add-service" mat-button>Book a service</button>
-			<button type="button" class="add-service" mat-button (click)="showForm()">Add an event</button>
+			<button mat-raised-button (click)="gotoProviders()">
+                <mat-icon>email</mat-icon>
+                <span>Book a service</span>
+            </button>
 		</div>
 	</div>
 </div>

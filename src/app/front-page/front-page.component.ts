@@ -9,7 +9,7 @@ import { Globals } from '../globals.service'
 })
 export class FrontPageComponent implements OnInit {
 
-	constructor(private util:Globals) { }
+	constructor(private glob:Globals) { }
 	ngOnInit() {
 	}
 
@@ -25,6 +25,9 @@ export class FrontPageComponent implements OnInit {
 	}
 
 	action() {
-		this.util.selIndex = 1;
+		this.glob.selIndex = 1;
+	}
+	gotoProviders() {
+		this.glob.selIndex = 1;		
 	}
 }
